@@ -1,5 +1,6 @@
 import joblib
 import pandas as pd
+from pathlib import Path
 
 # ==============================================================================
 # 1. FERRAMENTAS (TOOLS)
@@ -17,7 +18,8 @@ def tool_consultar_modelo_preditivo(dados_paciente: dict) -> dict:
         "eventos_24h", "disponibilidade_recursos"
     ]
     df_paciente = pd.DataFrame([dados])
-    modelo = joblib.load("modelo_risco_cardiaco.pkl")
+    modelo_path = Path(__file__).resolve().with_name("modelo_risco_cardiaco.pkl")
+    modelo = joblib.load(modelo_path)
     
     probabilidade = float(modelo.predict_proba(df_paciente[features])[:, 1][0])
     classe = int(modelo.predict(df_paciente[features])[0])
