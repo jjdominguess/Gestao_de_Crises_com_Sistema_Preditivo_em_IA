@@ -1,0 +1,133 @@
+{
+  "caso_sintetico": {
+    "idade_media": 62.0,
+    "carga_sistema": 92.0,
+    "tempo_espera": 75.0,
+    "fc_media": 118.0,
+    "spo2_media": 89.0,
+    "pa_sistolica": 100.0,
+    "temperatura": 37.5,
+    "densidade_eventos": 7,
+    "eventos_24h": 5,
+    "disponibilidade_recursos": 25.0
+  },
+  "trilha_auditoria": [
+    "[HANDOFF] Orquestrador → Analista de Risco",
+    "[TOOL] consultar_modelo_preditivo executada",
+    "[HANDOFF] Analista de Risco → Especialista em Protocolos",
+    "[TOOL] consultar_protocolos executada",
+    "[HANDOFF] Especialista em Protocolos → Planejador",
+    "[TOOL] consultar_resumo_validado executada"
+  ],
+  "historico_mensagens": [
+    {
+      "content": "Execute a triagem acadêmica multiagente para o caso simulado a seguir. Use as ferramentas oficiais na ordem: modelo → protocolos → resposta. Faça os handoffs entre os agentes. Dados do caso:\n{\"idade_media\": 62.0, \"carga_sistema\": 92.0, \"tempo_espera\": 75.0, \"fc_media\": 118.0, \"spo2_media\": 89.0, \"pa_sistolica\": 100.0, \"temperatura\": 37.5, \"densidade_eventos\": 7, \"eventos_24h\": 5, \"disponibilidade_recursos\": 25.0}",
+      "role": "user"
+    },
+    {
+      "arguments": "{}",
+      "call_id": "call_hncTdyHiVo4AiAWNKV4nqECE",
+      "name": "transfer_to_analista_de_risco",
+      "type": "function_call",
+      "id": "fc_07751a278570db99006ad64c4874c887d2a760cf4d42f519bf",
+      "status": "completed"
+    },
+    {
+      "call_id": "call_hncTdyHiVo4AiAWNKV4nqECE",
+      "output": "{\"assistant\": \"Analista de Risco\"}",
+      "type": "function_call_output"
+    },
+    {
+      "arguments": "{}",
+      "call_id": "call_ESMkaGm08EHfdHXvUQITUyOo",
+      "name": "consultar_modelo_preditivo",
+      "type": "function_call",
+      "id": "fc_07751a278570db99006ad64c4c25d487d29806edf0c3364247",
+      "status": "completed"
+    },
+    {
+      "call_id": "call_ESMkaGm08EHfdHXvUQITUyOo",
+      "output": "{\"probabilidade_risco\": 1.0, \"classe_predita\": 1, \"classificacao_risco\": \"PICO DE RISCO\"}",
+      "type": "function_call_output"
+    },
+    {
+      "arguments": "{}",
+      "call_id": "call_5UazKu1UG3BC6lxmuZIbCcaO",
+      "name": "transfer_to_especialista_em_protocolos",
+      "type": "function_call",
+      "id": "fc_07751a278570db99006ad64c59695487d295b0bf85faa8b196",
+      "status": "completed"
+    },
+    {
+      "call_id": "call_5UazKu1UG3BC6lxmuZIbCcaO",
+      "output": "{\"assistant\": \"Especialista em Protocolos\"}",
+      "type": "function_call_output"
+    },
+    {
+      "arguments": "{}",
+      "call_id": "call_pYkmiTjwSDA63eTlr5LQVBWl",
+      "name": "consultar_protocolos",
+      "type": "function_call",
+      "id": "fc_07751a278570db99006ad64c5a957087d29c98d038865b8e53",
+      "status": "completed"
+    },
+    {
+      "call_id": "call_pYkmiTjwSDA63eTlr5LQVBWl",
+      "output": "{\"protocolos_sugeridos\": [\"Se carga do sistema > 85% → abrir unidades temporárias\", \"Se disponibilidade_recursos < 30% → redistribuir insumos\", \"Se densidade_eventos > 6 → ativar plano de contingência\", \"Se risco sistêmico alto → ativar estado de emergência\"]}",
+      "type": "function_call_output"
+    },
+    {
+      "arguments": "{}",
+      "call_id": "call_PKEyV2zeCKijShfvIWH3xKoT",
+      "name": "transfer_to_planejador_de_resposta",
+      "type": "function_call",
+      "id": "fc_07751a278570db99006ad64c5b780887d2b408ff7327f9a860",
+      "status": "completed"
+    },
+    {
+      "call_id": "call_PKEyV2zeCKijShfvIWH3xKoT",
+      "output": "{\"assistant\": \"Planejador de Resposta\"}",
+      "type": "function_call_output"
+    },
+    {
+      "arguments": "{}",
+      "call_id": "call_6FIZfyzk8K1YjFv28d6yvsPC",
+      "name": "consultar_resumo_validado",
+      "type": "function_call",
+      "id": "fc_07751a278570db99006ad64c5d57dc87d2a59e7070feb334b2",
+      "status": "completed"
+    },
+    {
+      "call_id": "call_6FIZfyzk8K1YjFv28d6yvsPC",
+      "output": "{\"probabilidade_risco\": 1.0, \"classe_predita\": 1, \"classificacao_risco\": \"PICO DE RISCO\", \"protocolos_sugeridos\": [\"Se carga do sistema > 85% → abrir unidades temporárias\", \"Se disponibilidade_recursos < 30% → redistribuir insumos\", \"Se densidade_eventos > 6 → ativar plano de contingência\", \"Se risco sistêmico alto → ativar estado de emergência\"], \"aviso\": \"Demonstração acadêmica com dados sintéticos; não possui validação clínica.\"}",
+      "type": "function_call_output"
+    },
+    {
+      "id": "msg_07751a278570db99006ad64c5e43e487d2a9f62ad4aa8e942d",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"probabilidade_risco\":1,\"classe_predita\":1,\"classificacao_risco\":\"PICO DE RISCO\",\"protocolos_sugeridos\":[\"Se carga do sistema > 85% → abrir unidades temporárias\",\"Se disponibilidade_recursos < 30% → redistribuir insumos\",\"Se densidade_eventos > 6 → ativar plano de contingência\",\"Se risco sistêmico alto → ativar estado de emergência\"],\"resumo_operacional\":\"A análise do caso simulado indica um pico de risco com probabilidade máxima. A carga alta do sistema, baixa disponibilidade de recursos e alta densidade de eventos ativaram protocolos de contingência e redistribuição de insumos.\",\"aviso\":\"Demonstração acadêmica com dados sintéticos; não possui validação clínica.\"}",
+          "type": "output_text",
+          "logprobs": []
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "resposta": {
+    "probabilidade_risco": 1.0,
+    "classe_predita": 1,
+    "classificacao_risco": "PICO DE RISCO",
+    "protocolos_sugeridos": [
+      "Se carga do sistema > 85% → abrir unidades temporárias",
+      "Se disponibilidade_recursos < 30% → redistribuir insumos",
+      "Se densidade_eventos > 6 → ativar plano de contingência",
+      "Se risco sistêmico alto → ativar estado de emergência"
+    ],
+    "resumo_operacional": "A análise do caso simulado indica um pico de risco com probabilidade máxima. A carga alta do sistema, baixa disponibilidade de recursos e alta densidade de eventos ativaram protocolos de contingência e redistribuição de insumos.",
+    "aviso": "Demonstração acadêmica com dados sintéticos; não possui validação clínica."
+  }
+}

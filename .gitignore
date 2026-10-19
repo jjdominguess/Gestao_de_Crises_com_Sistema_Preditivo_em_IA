@@ -1,0 +1,23 @@
+# Variaveis de ambiente e credenciais
+.env
+.env.*
+!.env.example
+
+# Ambiente virtual
+.venv/
+venv/
+
+# Arquivos temporarios Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Configuracoes locais do PyCharm
+.idea/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Logs temporarios
+*.log

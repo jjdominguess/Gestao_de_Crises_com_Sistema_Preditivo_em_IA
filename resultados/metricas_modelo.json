@@ -1,0 +1,20 @@
+{
+  "total_registros": 5000,
+  "registros_treino": 4000,
+  "registros_teste": 1000,
+  "acuracia": 0.999,
+  "precisao": 1.0,
+  "recall": 0.9962406015037594,
+  "f1_score": 0.9981167608286252,
+  "roc_auc": 1.0,
+  "matriz_confusao": [
+    [
+      734,
+      0
+    ],
+    [
+      1,
+      265
+    ]
+  ]
+}
