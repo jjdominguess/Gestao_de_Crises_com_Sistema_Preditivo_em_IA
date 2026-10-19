@@ -31,13 +31,13 @@ Os dados e os protocolos são simulados. O projeto não foi validado para utiliz
 
 ## Integrantes
 
-| Nome completo | RM |
+| Nome completo 
 |---|---|
-| [Nome do integrante 1] | [RM] |
-| [Nome do integrante 2] | [RM] |
-| [Nome do integrante 3] | [RM] |
-| [Nome do integrante 4] | [RM] |
-| [Nome do integrante 5, se houver] | [RM] |
+| Murilo Santana
+| João José Domingues Silva
+| Willian Augusto Ferreira
+| William Xavier Santos
+
 
 ## Base de Dados e Modelo Preditivo
 
@@ -177,10 +177,6 @@ A execução completa apresenta os handoffs, as ferramentas utilizadas, a probab
 **YouTube (não listado):** [INSERIR_LINK_DO_VIDEO]
 
 A demonstração apresenta o treinamento do modelo, a execução multiagente e o resultado do caso simulado, em até quatro minutos.
-
-## Entrega
-
-O repositório deve permanecer privado e ser compartilhado com o perfil `fiap-tutoria`. A entrega no Portal do Aluno será realizada com um único arquivo `.txt` contendo o link do repositório e o link do vídeo demonstrativo.
 
 ## Licença
 
